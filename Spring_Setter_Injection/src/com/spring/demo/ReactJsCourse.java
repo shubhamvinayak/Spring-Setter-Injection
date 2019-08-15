@@ -11,6 +11,7 @@ public class ReactJsCourse implements Course {
 	
 	public String getEmailAddress() {
 		return EmailAddress;
+		
 	}
 
 	public void setEmailAddress(String emailAddress) {
