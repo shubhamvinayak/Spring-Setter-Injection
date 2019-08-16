@@ -6,6 +6,9 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- Load the properties file:course.properties -->
+    <context:property-placeholder location="classpath:course.properties"/>
 
     <!-- Define your beans here -->
     <!-- Define dependency -->
@@ -23,8 +26,12 @@
     <property name="fortuneServices" ref="myFortune"></property>
     
     <!-- Injection of literals -->
-    <property name="emailAddress" value="shubabc@gmail.com"></property>
-    <property name="team" value="NinjaCoder"></property>
+    <!-- <property name="emailAddress" value="shubabc@gmail.com"></property>
+    <property name="team" value="NinjaCoder"></property> -->
+    
+    <!-- taking value from properties file -->
+    <property name="emailAddress" value="${Course.email}"></property>
+    <property name="team" value="${Course.team}"></property>
     
     </bean>
     		
